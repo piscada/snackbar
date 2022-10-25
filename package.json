@@ -1,0 +1,33 @@
+{
+  "name": "@piscada/snackbar",
+  "version": "1.0.0",
+  "description": "Simple JS snackbar. Supports all JS-frameworks.",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Magnus Gule",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://magnuguli@bitbucket.org/teampiscadacloud/piscada-snackbar.git"
+  },
+  "keywords": [
+    "snackbar",
+    "piscada"
+  ],
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "homepage": "https://bitbucket.org/teampiscadacloud/piscada-snackbar#readme",
+  "publishConfig": {
+    "registry": "https://nexus.piscada.tools/repository/npm-hosted/"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/teampiscadacloud/piscada-snackbar/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
