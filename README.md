@@ -1,9 +1,10 @@
-# piscada-snackbar
+# @piscada/snackbar
 
 ## Prerequisites
 
-- Ensure you've added the localNexus/Sonartype .npmrc / .yarnrc settings pointing to the local nexus.piscada.tools/repository/npm-hosted
-- Find docs of this
+- Ensure you've set NEXUS_AUTH and pointed your project towards nexus.piscada.tools as your repository path:
+    - See https://piscada.atlassian.net/wiki/spaces/PISCADA/pages/943783941/Using+Nexus+Sonartype+Repo+Manager+for+your+project for details
+    
 
 # install
 
