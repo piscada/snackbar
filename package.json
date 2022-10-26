@@ -36,9 +36,6 @@
     "typescript": "^4.5.5"
   },
   "homepage": "https://bitbucket.org/teampiscadacloud/piscada-snackbar#readme",
-  "publishConfig": {
-    "registry": "https://nexus.piscada.tools/repository/npm-hosted/"
-  },
   "bugs": {
     "url": "https://bitbucket.org/teampiscadacloud/piscada-snackbar/issues"
   },
