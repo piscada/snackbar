@@ -11,6 +11,7 @@ pipelines:
       - step:
           name: Publish package => Nexus
           script:
+            - npm ci
             - npm run format
             - npm run prepublishOnly
             - npm run prepare # will build
