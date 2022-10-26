@@ -1,5 +1,5 @@
 
-image: node:12.19.0
+image: node:16.18.0
 
 # NOTE: There is a bug with later LTS/latest node 
 # Use this just for publishing instead
@@ -13,8 +13,8 @@ pipelines:
           script:
             - npm install
             - npm run format
-            - npm run prepublishOnly
-            - npm run prepare # will build
+            - npm run test
+            - npm run build
             - npm version patch -m "Upgrade to %s [skip ci]"
             - git push && git push --tags
             - mv .npmrc_config .npmrc
