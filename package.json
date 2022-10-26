@@ -3,7 +3,6 @@
   "version": "1.0.7",
   "description": "Simple JS snackbar. Supports all JS-frameworks.",
   "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "test": "jest --config jestconfig.json",
