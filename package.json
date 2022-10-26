@@ -39,10 +39,6 @@
   "bugs": {
     "url": "https://bitbucket.org/teampiscadacloud/piscada-snackbar/issues"
   },
-  "directories": {
-    "lib": "lib",
-    "src": "src"
-  },
   "files": [
     "lib/**/*"
   ]

@@ -5,7 +5,8 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "outDir": "lib",
+    "declaration": true,
+    "outDir": "./lib",
     "strict": true,
     "useUnknownInCatchVariables": false
   }
