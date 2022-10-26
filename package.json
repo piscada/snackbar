@@ -1,6 +1,6 @@
 {
   "name": "@piscada/snackbar",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple JS snackbar. Supports all JS-frameworks.",
   "main": "dist/index.js",
   "scripts": {
