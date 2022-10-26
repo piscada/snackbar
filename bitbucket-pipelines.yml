@@ -11,6 +11,9 @@ pipelines:
       - step:
           name: Publish package => Nexus
           script:
+            - npm run
+            - npm run prepublishOnly
+            - npm run prepare # will build
             - npm version patch -m "Upgrade to %s [skip ci]"
             - git push && git push --tags
             - mv .npmrc_config .npmrc
