@@ -1,6 +1,6 @@
 import './snackbar.css';
 import colorLog from './colorLog';
-import { Msg, SnackType } from './types';
+import { Msg, SnackType } from './snackTypes';
 
 const AUTO_DISMISS: number = 6000;
 

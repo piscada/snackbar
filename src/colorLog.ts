@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* tslint:disable:no-console */
 
-import { SnackType } from './types';
+import { SnackType } from './snackTypes';
 
 const success = Function.prototype.bind.call(console.log, console, `%c %s`, `color: Green`);
 const info = Function.prototype.bind.call(console.log, console, `%c %s`, `color: DodgerBlue`);
