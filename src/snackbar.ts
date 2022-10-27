@@ -1,4 +1,5 @@
-import './snackbar.css';
+import snackStyle from './snackbar.css';
+
 import colorLog from './colorLog';
 import { Msg, SnackType } from './snackTypes';
 
@@ -70,7 +71,7 @@ function snackbar(msg: Msg, type: SnackType = SnackType.INFO, timeout: number = 
 
     // Mo
     if (!isMainContainerUp()) {
-      snackbarContainer = make('div', 'snackbar-container');
+      snackbarContainer = make('div', `${snackStyle.snackbarContainerClass}`);
       document.body.appendChild(snackbarContainer);
     } else {
       snackbarContainer = getEl('snackbar-container');
