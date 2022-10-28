@@ -1,4 +1,4 @@
-import snackStyle from './snackbar.css';
+import snackStyle from './snackbar.module.css';
 
 import colorLog from './colorLog';
 import { Msg, SnackType } from './snackTypes';
