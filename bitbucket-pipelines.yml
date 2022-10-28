@@ -13,7 +13,7 @@ pipelines:
           script:
             - mv .npmrc_config .npmrc
             - export NEXUS_AUTH=$(echo -n "$NEXUS_NPM_PUBLISH_USERNAME:$NEXUS_NPM_PUBLISH_PASSWORD" | openssl enc -base64)
-            - echo -e "\n_auth=$NEXUS_AUTH"  >> .npmrc
+            - echo -e ":_auth=$NEXUS_AUTH"  >> .npmrc
             - cat .npmrc
             - npm install
             - npm run format
