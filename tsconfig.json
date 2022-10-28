@@ -1,17 +1,17 @@
 {
   // Change this to match your project
-  "include": ["src/**/*"],
+  "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"],
   "compilerOptions": {
     "target": "es2016",
-    "module": "commonjs",
+    "module": "ES2015",
     "outDir": "dist",
     "moduleResolution": "node",
     "declarationDir": "dist/types",
     "allowSyntheticDefaultImports": true,
     "useUnknownInCatchVariables": false,
     "declaration": true,
-    "emitDeclarationOnly": true,
+    // "emitDeclarationOnly": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
