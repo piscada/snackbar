@@ -14,11 +14,7 @@
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "build": "yarn lint && yarn format && rollup -c",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "lint": "tslint -p tsconfig.json"
   },
   "author": "Yeloman",
   "license": "ISC",
