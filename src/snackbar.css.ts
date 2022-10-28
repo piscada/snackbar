@@ -22,3 +22,5 @@ export const closeIcon = style({
 });
 
 export default { snackbarContainerClass, typeIcon, closeIcon };
+
+// https://css-tricks.com/css-in-typescript-with-vanilla-extract/
