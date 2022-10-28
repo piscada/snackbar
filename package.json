@@ -56,5 +56,8 @@
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.9.1"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.piscada.tools/repository/npm-hosted/"
   }
 }
