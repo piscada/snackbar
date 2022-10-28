@@ -11,6 +11,7 @@ pipelines:
           name: Publish package => Nexus
           script:
             # Using npmjs.org registry
+            - npm version patch -m "Upgrade to %s [skip ci]"
             - npm config set loglevel=verbose
             - mv .npmrc_config .npmrc
             - NEXUS_PWD_READ=$(echo -n "$NEXUS_NPM_READ_PASSWORD" | openssl enc -base64)
@@ -19,11 +20,11 @@ pipelines:
             - echo -e "\n//nexus.piscada.tools/repository/npm-group/:username=$NEXUS_NPM_READ_USERNAME"  >> .npmrc
             - echo -e "\n//nexus.piscada.tools/repository/npm-hosted/:_password=$NEXUS_PWD_PUBLISH"  >> .npmrc
             - echo -e "\n//nexus.piscada.tools/repository/npm-hosted/:username=$NEXUS_NPM_PUBLISH_USERNAME"  >> .npmrc
+            - cat .npmrc
             - npm install
             - npm run format
             - npm run test
             - npm run build
-            - npm version patch -m "Upgrade to %s [skip ci]"
             - git push && git push --tags
             # Since this is the npm-hosted repo, we change from registry.npmjs.org => npm-hosted on nexus.piscada.tools
             - npm publish
