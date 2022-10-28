@@ -12,7 +12,7 @@
     "test": "jest --config jestconfig.json",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
-    "build": "npm run clean && npm run test && npm run lint && npm run format && rollup -c",
+    "build": "npm run clean && npm run test && npm run lint && npm run format && rollup -c && npm run copy-files",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },

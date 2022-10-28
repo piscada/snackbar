@@ -69,7 +69,7 @@ function snackbar(msg: Msg, type: SnackType = SnackType.INFO, timeout: number = 
 
     // Mo
     if (!isMainContainerUp()) {
-      snackbarContainer = make('div', `${snackStyle.snackbarContainerClass}`);
+      snackbarContainer = make('div', 'snackbar-container');
       document.body.appendChild(snackbarContainer);
     } else {
       snackbarContainer = getEl('snackbar-container');
