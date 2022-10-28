@@ -1,1 +1,2 @@
 registry=https://nexus.piscada.tools/repository/npm-hosted
+_auth=${NEXUS_PUBLISH_AUTH}
