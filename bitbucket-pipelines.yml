@@ -21,9 +21,7 @@ pipelines:
             - echo -e "\n//nexus.piscada.tools/repository/npm-hosted/:_password=$NEXUS_PWD_PUBLISH"  >> .npmrc
             - echo -e "\n//nexus.piscada.tools/repository/npm-hosted/:username=$NEXUS_NPM_PUBLISH_USERNAME"  >> .npmrc
             - cat .npmrc
-            - npm install
-            - npm run format
-            - npm run test
+            - npm ci
             - npm run build
             - git push && git push --tags
             # Since this is the npm-hosted repo, we change from registry.npmjs.org => npm-hosted on nexus.piscada.tools
