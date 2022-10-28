@@ -11,6 +11,7 @@ pipelines:
           name: Publish package => Nexus
           script:
             # Using npmjs.org registry
+            - npm config list --json
             - npm install
             - npm run format
             - npm run test
