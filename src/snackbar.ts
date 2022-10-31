@@ -5,8 +5,6 @@ import { styleString } from './snackStyling';
 const AUTO_DISMISS: number = 6000;
 let alreadyInitialized = 0;
 
-prependCssToDocument();
-
 // Short hand snacks
 export const snack = {
   info(msg: Msg, timeout: number = AUTO_DISMISS) {
@@ -32,6 +30,10 @@ export const snack = {
 
 // Default snackbar
 function snackbar(msg: Msg, type: SnackType = SnackType.INFO, timeout: number = AUTO_DISMISS) {
+  if (document) {
+    prependCssToDocument();
+  }
+
   msg = forceToStr(msg);
 
   const baseId = generateID(msg);
