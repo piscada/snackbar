@@ -4,7 +4,6 @@ import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import excludeDependenciesFromBundle from 'rollup-plugin-exclude-dependencies-from-bundle';
-import { vanillaExtractPlugin } from '@vanilla-extract/rollup-plugin';
 
 const packageJson = require('./package.json');
 
@@ -29,7 +28,6 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss(),
-      // vanillaExtractPlugin(),
     ],
   },
   {

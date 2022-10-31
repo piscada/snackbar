@@ -1,7 +1,11 @@
 import colorLog from './colorLog';
 import { Msg, SnackType } from './snackTypes';
+import { styleString } from './snackStyling';
 
 const AUTO_DISMISS: number = 6000;
+var alreadyInitialized = 0;
+
+prependCssToDocument();
 
 // Short hand snacks
 export const snack = {
@@ -201,6 +205,20 @@ function forceToStr(anyType: any) {
   }
 
   return String(anyType);
+}
+
+function prependCssToDocument() {
+  if (alreadyInitialized) {
+    return;
+  }
+
+  const style = document.createElement('style');
+  style.innerHTML = styleString;
+  document.getElementsByTagName('head')[0].appendChild(style);
+
+  alreadyInitialized = 1;
+  // set function
+  // document.getElementById('someElementId').className = 'cssClass';
 }
 
 export default snackbar;
