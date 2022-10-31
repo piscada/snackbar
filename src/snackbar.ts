@@ -3,7 +3,7 @@ import { Msg, SnackType } from './snackTypes';
 import { styleString } from './snackStyling';
 
 const AUTO_DISMISS: number = 6000;
-var alreadyInitialized = 0;
+let alreadyInitialized = 0;
 
 prependCssToDocument();
 
