@@ -1,10 +1,5 @@
 # @piscada/snackbar
 
-## Prerequisites
-
-- Ensure you've set NEXUS_AUTH and pointed your project towards nexus.piscada.tools as your repository path:
-- See https://piscada.atlassian.net/wiki/spaces/PISCADA/pages/943783941/Using+Nexus+Sonartype+Repo+Manager+for+your+project for details
-
 # Install
 
     npm i @piscada/snackbar
