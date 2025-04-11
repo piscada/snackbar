@@ -1,0 +1,28 @@
+image: node:16.18.0
+
+# NOTE: There is a bug with later LTS/latest node
+# Use this just for publishing instead
+# https://github.com/npm/cli/pull/2445
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Publish package => Nexus
+          script:
+            # Using npmjs.org registry
+            - npm version patch -m "Upgrade to %s [skip ci]"
+            - npm config set loglevel=verbose
+            - mv .npmrc_config .npmrc
+            - NEXUS_PWD_READ=$(echo -n "$NEXUS_NPM_READ_PASSWORD" | openssl enc -base64)
+            - NEXUS_PWD_PUBLISH=$(echo -n "$NEXUS_NPM_PUBLISH_PASSWORD" | openssl enc -base64)
+            - echo -e "\n//nexus.piscada.tools/repository/npm-group/:_password=$NEXUS_PWD_READ"  >> .npmrc
+            - echo -e "\n//nexus.piscada.tools/repository/npm-group/:username=$NEXUS_NPM_READ_USERNAME"  >> .npmrc
+            - echo -e "\n//nexus.piscada.tools/repository/npm-hosted/:_password=$NEXUS_PWD_PUBLISH"  >> .npmrc
+            - echo -e "\n//nexus.piscada.tools/repository/npm-hosted/:username=$NEXUS_NPM_PUBLISH_USERNAME"  >> .npmrc
+            - cat .npmrc
+            - npm ci
+            - npm run build
+            - git push && git push --tags
+            # Since this is the npm-hosted repo, we change from registry.npmjs.org => npm-hosted on nexus.piscada.tools
+            - npm publish

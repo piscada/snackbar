@@ -1,0 +1,22 @@
+{
+  // Change this to match your project
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"],
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "ES2015",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "declarationDir": "dist/types",
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false,
+    "declaration": true,
+    // "emitDeclarationOnly": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  }
+}
