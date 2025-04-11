@@ -20,7 +20,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/teampiscadacloud/piscada-snackbar.git"
+    "url": "git+https://github.com/piscada/snackbar.git"
   },
   "keywords": [
     "snackbar",
@@ -47,14 +47,12 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.5.5"
   },
-  "homepage": "https://bitbucket.org/teampiscadacloud/piscada-snackbar#readme",
+  "homepage": "https://github.com/piscada/snackbar#readme",
   "bugs": {
-    "url": "https://bitbucket.org/teampiscadacloud/piscada-snackbar/issues"
+    "url": "https://github.com/piscada/snackbar/issues"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.9.1"
-  },
-  "publishConfig": {
-    "registry": "https://nexus.piscada.tools/repository/npm-hosted/"
   }
+
 }
